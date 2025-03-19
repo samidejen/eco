@@ -90,7 +90,7 @@ function QuizProvider({ children }) {
   // }, []);
 
   useEffect(function () {
-    fetch("/data/questions.json") // Fetch from the public folder
+    fetch("./data/questions.json") // Fetch from the public folder
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataReceived", payload: data }))
       .catch((err) => dispatch({ type: "dataFailed" }));
